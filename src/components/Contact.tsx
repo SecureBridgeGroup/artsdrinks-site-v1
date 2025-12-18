@@ -49,7 +49,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-800 mb-1">Telefone</h4>
-                    <p className="text-gray-600">(92) 99999-9999</p>
+                    <p className="text-gray-600">(92) 98117-6994</p>
                   </div>
                 </div>
 
@@ -59,7 +59,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-800 mb-1">Email</h4>
-                    <p className="text-gray-600">contato@artsdrinksmanaus.com.br</p>
+                    <p className="text-gray-600">contato@artsdrinks.com.br</p>
                   </div>
                 </div>
 
@@ -93,8 +93,8 @@ export default function Contact() {
 
               <div className="mt-8 p-6 bg-gradient-to-br from-red-500 to-yellow-500 rounded-2xl shadow-xl text-white">
                 <h4 className="text-xl font-bold mb-2">Horário de Atendimento</h4>
-                <p className="mb-1">Segunda a Sexta: 9h às 18h</p>
-                <p className="mb-1">Sábado: 9h às 14h</p>
+                <p className="mb-1">Segunda a Sexta: 8h às 18h</p>
+                <p className="mb-1">Sábado: 8h às 14h</p>
                 <p>Eventos: Horários flexíveis</p>
               </div>
             </div>

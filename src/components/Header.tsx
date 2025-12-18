@@ -1,5 +1,6 @@
-import { Menu, X, Wine } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import logo from "../assets/logo2_artsdrinks.png";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,55 +14,126 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md transition-all duration-300">
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2 cursor-pointer" onClick={() => scrollToSection('home')}>
-            <Wine className="w-8 h-8 text-red-600" />
-            <div>
-              <h1 className="text-2xl font-bold text-gray-800">Arts Drinks</h1>
-              <p className="text-xs text-yellow-600">Manaus</p>
-            </div>
+    <header className="fixed top-4 left-0 right-0 z-50 px-4">
+      <div className="w-full max-w-7xl mx-auto">
+        <div
+          className="
+    grid grid-cols-3 items-center
+    bg-black backdrop-blur-xl
+    px-8 py-0
+    rounded-2xl
+    shadow-2xl shadow-black/70
+    border border-white/5
+  "
+        >
+
+          {/* LOGO */}
+          <div
+            onClick={() => scrollToSection('home')}
+            className="cursor-pointer flex items-center justify-start pl-2 md:pl-20"
+          >
+            <img
+              src={logo}
+              alt="Arts Drinks"
+              className="
+                h-20 md:h-24 lg:h-28
+                brightness-110 contrast-125
+                drop-shadow-xl transition-all
+                duration-300 hover:scale-105
+                hover:drop-shadow-[0_0_30px_rgba(220,38,38,0.35)]
+              "
+            />
           </div>
 
-          <nav className="hidden md:flex items-center space-x-8">
-            <button onClick={() => scrollToSection('home')} className="text-gray-700 hover:text-red-600 transition-colors font-medium">
+          {/* MENU DESKTOP */}
+          <nav className="hidden md:flex items-center gap-8">
+            <button
+              onClick={() => scrollToSection('home')}
+              className="text-gray-300 hover:text-yellow-400 transition font-medium"
+            >
               Início
             </button>
-            <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-red-600 transition-colors font-medium">
+
+            <button
+              onClick={() => scrollToSection('about')}
+              className="text-gray-300 hover:text-yellow-400 transition font-medium"
+            >
               Sobre
             </button>
-            <button onClick={() => scrollToSection('products')} className="text-gray-700 hover:text-red-600 transition-colors font-medium">
+
+            <button
+              onClick={() => scrollToSection('products')}
+              className="text-gray-300 hover:text-yellow-400 transition font-medium"
+            >
               Produtos
             </button>
-            <button onClick={() => scrollToSection('contact')} className="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition-all transform hover:scale-105 font-medium">
+
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="
+                bg-yellow-600 text-white px-7 py-2
+                rounded-full font-semibold
+                hover:bg-yellow-700 hover:shadow-lg
+                hover:shadow-yellow-600/40
+                transition-all
+              "
+            >
               Contato
             </button>
           </nav>
 
+          {/* MOBILE BUTTON */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-gray-700"
+            className="md:hidden text-yellow-400"
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
           </button>
         </div>
 
+        {/* MENU MOBILE */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 flex flex-col space-y-3 animate-fadeIn">
-            <button onClick={() => scrollToSection('home')} className="text-gray-700 hover:text-red-600 transition-colors font-medium text-left">
+          <div
+            className="
+              md:hidden mt-3
+              bg-black/95 backdrop-blur-xl
+              rounded-2xl p-5
+              shadow-xl border border-white/10
+              space-y-4
+            "
+          >
+            <button
+              onClick={() => scrollToSection('home')}
+              className="block w-full text-left text-gray-300 hover:text-yellow-400"
+            >
               Início
             </button>
-            <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-red-600 transition-colors font-medium text-left">
+
+            <button
+              onClick={() => scrollToSection('about')}
+              className="block w-full text-left text-gray-300 hover:text-yellow-400"
+            >
               Sobre
             </button>
-            <button onClick={() => scrollToSection('products')} className="text-gray-700 hover:text-red-600 transition-colors font-medium text-left">
+
+            <button
+              onClick={() => scrollToSection('products')}
+              className="block w-full text-left text-gray-300 hover:text-yellow-400"
+            >
               Produtos
             </button>
-            <button onClick={() => scrollToSection('contact')} className="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition-colors font-medium text-center">
+
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="
+                w-full bg-red-600 text-white py-3
+                rounded-full font-semibold
+                hover:bg-red-700 transition
+              "
+            >
               Contato
             </button>
-          </nav>
+          </div>
         )}
       </div>
     </header>
