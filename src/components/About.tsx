@@ -44,7 +44,7 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             <div className="relative overflow-hidden rounded-2xl shadow-xl group">
               <img
-                src="https://images.pexels.com/photos/3201763/pexels-photo-3201763.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="/assets/profissionais.png"
                 alt="Bartender preparando drinks"
                 className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
               />
@@ -57,7 +57,7 @@ export default function About() {
 
             <div className="relative overflow-hidden rounded-2xl shadow-xl group">
               <img
-                src="https://images.pexels.com/photos/1089930/pexels-photo-1089930.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="/assets/drinkartesanal_exclusivo.png"
                 alt="Drinks coloridos"
                 className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
               />

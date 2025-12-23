@@ -1,5 +1,4 @@
 import { Instagram, Facebook, Mail, Phone, Heart } from 'lucide-react';
-import logo from "../assets/logo2_artsdrinks.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -15,7 +14,7 @@ export default function Footer() {
           <div>
             <div className="mb-4">
               <img
-                src={logo}
+                src="/assets/logo2_artsdrinks.png"
                 alt="Arts Drinks"
                 className="h-20 w-auto"
               />

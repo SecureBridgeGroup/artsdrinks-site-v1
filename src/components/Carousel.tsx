@@ -3,22 +3,22 @@ import { useState, useEffect } from 'react';
 
 const images = [
   {
-    url: 'https://images.pexels.com/photos/338713/pexels-photo-338713.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    src: '/assets/profissionais1.png',
     title: 'Drinks Artesanais',
     subtitle: 'Experiências únicas para seu evento'
   },
   {
-    url: 'https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    src: '/assets/bar.png',
     title: 'Bartenders Profissionais',
     subtitle: 'Qualidade e excelência no atendimento'
   },
   {
-    url: 'https://images.pexels.com/photos/1283566/pexels-photo-1283566.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    src: '/assets/drink_semalcool.png',
     title: 'Drinks sem Álcool',
     subtitle: 'Sabor e sofisticação para todos'
   },
   {
-    url: 'https://images.pexels.com/photos/616836/pexels-photo-616836.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    src: '/assets/evento_memoria.png',
     title: 'Eventos Memoráveis',
     subtitle: 'Transformamos momentos em memórias'
   }
@@ -52,20 +52,31 @@ export default function Carousel() {
       {images.map((image, index) => (
         <div
           key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === currentIndex ? 'opacity-100' : 'opacity-0'
-          }`}
+          className={`absolute inset-0 transition-opacity duration-1000 ${index === currentIndex ? 'opacity-100' : 'opacity-0'
+            }`}
         >
+          {/* MOBILE — imagem full cover */}
           <div
-            className="absolute inset-0 bg-cover bg-center transform transition-transform duration-[10000ms] scale-100 hover:scale-105"
-            style={{ backgroundImage: `url(${image.url})` }}
+            className="absolute inset-0 bg-cover bg-center transform transition-transform duration-[10000ms] scale-100 hover:scale-105 md:hidden"
+            style={{ backgroundImage: `url(${image.src})` }}
+          />
+
+          {/* DESKTOP — fundo desfocado */}
+          <div
+            className="absolute inset-0 bg-cover bg-center scale-110 blur-xl hidden md:block"
+            style={{ backgroundImage: `url(${image.src})` }}
+          />
+
+          {/* DESKTOP — imagem preservada */}
+          <div
+            className="absolute inset-0 bg-contain bg-center bg-no-repeat hidden md:block"
+            style={{ backgroundImage: `url(${image.src})` }}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
 
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className={`text-center text-white px-4 transition-all duration-1000 ${
-              index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-            }`}>
+            <div className={`text-center text-white px-4 transition-all duration-1000 ${index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+              }`}>
               <h2 className="text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg">
                 {image.title}
               </h2>
@@ -105,9 +116,8 @@ export default function Carousel() {
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all ${
-              index === currentIndex ? 'bg-white w-8' : 'bg-white/50'
-            }`}
+            className={`w-3 h-3 rounded-full transition-all ${index === currentIndex ? 'bg-white w-8' : 'bg-white/50'
+              }`}
           />
         ))}
       </div>

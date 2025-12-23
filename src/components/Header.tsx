@@ -1,6 +1,5 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
-import logo from "../assets/logo2_artsdrinks.png";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,7 +32,7 @@ export default function Header() {
             className="cursor-pointer flex items-center justify-start pl-2 md:pl-20"
           >
             <img
-              src={logo}
+              src="/assets/logo2_artsdrinks.png"
               alt="Arts Drinks"
               className="
                 h-20 md:h-24 lg:h-28
