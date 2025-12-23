@@ -97,17 +97,17 @@ export default function CasesPage() {
         <div className="grid grid-cols-3 bg-gray-900/80 backdrop-blur-md rounded-2xl p-6 shadow-2xl border border-white/10">
           <div className="text-center border-r border-white/10">
             <Award className="w-8 h-8 text-yellow-500 mx-auto mb-2" />
-            <span className="block text-2xl md:text-3xl font-bold text-white">500+</span>
+            <span className="block text-2xl md:text-3xl font-bold text-white">200+</span>
             <span className="text-xs md:text-sm text-gray-400">Eventos Realizados</span>
           </div>
           <div className="text-center border-r border-white/10">
             <Users className="w-8 h-8 text-red-600 mx-auto mb-2" />
-            <span className="block text-2xl md:text-3xl font-bold text-white">10k+</span>
+            <span className="block text-2xl md:text-3xl font-bold text-white">2k+</span>
             <span className="text-xs md:text-sm text-gray-400">Convidados Servidos</span>
           </div>
           <div className="text-center">
             <Calendar className="w-8 h-8 text-blue-500 mx-auto mb-2" />
-            <span className="block text-2xl md:text-3xl font-bold text-white">8</span>
+            <span className="block text-2xl md:text-3xl font-bold text-white">4</span>
             <span className="text-xs md:text-sm text-gray-400">Anos de História</span>
           </div>
         </div>
