@@ -17,7 +17,7 @@ export default function Header() {
       <div className="w-full max-w-7xl mx-auto">
         <div
           className="
-    grid grid-cols-3 items-center
+    grid grid-cols-3 items-center md:grid-cols-3
     bg-black backdrop-blur-xl
     px-8 py-0
     rounded-2xl
@@ -29,18 +29,23 @@ export default function Header() {
           {/* LOGO */}
           <div
             onClick={() => scrollToSection('home')}
-            className="cursor-pointer flex items-center justify-start pl-2 md:pl-20"
+            className="
+    cursor-pointer
+    flex justify-center md:justify-start
+    md:pl-20
+    col-start-2 md:col-start-1
+  "
           >
             <img
               src="/assets/logo2_artsdrinks.png"
               alt="Arts Drinks"
               className="
-                h-20 md:h-24 lg:h-28
-                brightness-110 contrast-125
-                drop-shadow-xl transition-all
-                duration-300 hover:scale-105
-                hover:drop-shadow-[0_0_30px_rgba(220,38,38,0.35)]
-              "
+      h-20 md:h-24 lg:h-28
+      brightness-110 contrast-125
+      drop-shadow-xl transition-all
+      duration-300 hover:scale-105
+      hover:drop-shadow-[0_0_30px_rgba(220,38,38,0.35)]
+    "
             />
           </div>
 
@@ -84,7 +89,7 @@ export default function Header() {
           {/* MOBILE BUTTON */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-yellow-400"
+            className="md:hidden text-yellow-400 flex justify-end col-start-3"
           >
             {isMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
           </button>
