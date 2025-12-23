@@ -1,4 +1,4 @@
-import { Menu, X, MessageCircle } from 'lucide-react';
+import { Menu, X} from 'lucide-react';
 import { useState } from 'react';
 
 
@@ -89,16 +89,6 @@ export default function Header() {
 
           {/* MOBILE ACTIONS */}
           <div className="md:hidden col-start-3 flex justify-end items-center gap-4">
-            {/* WhatsApp */}
-            <a
-              href="https://wa.me/5592981176994"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-green-500 hover:text-green-400 transition"
-              aria-label="WhatsApp"
-            >
-              <MessageCircle className="w-7 h-7" />
-            </a>
 
             {/* Menu */}
             <button
