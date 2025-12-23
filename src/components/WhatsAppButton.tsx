@@ -3,7 +3,7 @@ import { MessageCircle } from 'lucide-react';
 export default function WhatsAppButton() {
   const phone = '5592981176994';
   const message = encodeURIComponent(
-    'Olá! Gostaria de um orçamento 🍸'
+    'Olá! Gostaria de um orçamento para meu evento 🍸'
   );
 
   return (
@@ -11,21 +11,27 @@ export default function WhatsAppButton() {
       href={`https://wa.me/${phone}?text=${message}`}
       target="_blank"
       rel="noopener noreferrer"
+      aria-label="WhatsApp"
       className="
-        hidden md:flex
-        fixed bottom-6 right-6 z-50
+        fixed z-50
+        bottom-4 right-4
+        md:bottom-6 md:right-6
+
         bg-green-500 hover:bg-green-600
         text-white
-        w-14 h-14
+
+        w-14 h-14 md:w-16 md:h-16
         rounded-full
-        items-center justify-center
-        shadow-xl
+
+        flex items-center justify-center
+        shadow-2xl
+
         transition-all
         hover:scale-110
+        active:scale-95
       "
-      aria-label="WhatsApp"
     >
-      <MessageCircle className="w-7 h-7" />
+      <MessageCircle className="w-7 h-7 md:w-8 md:h-8" />
     </a>
   );
 }
