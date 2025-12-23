@@ -91,7 +91,7 @@ export default function Header() {
           <div className="md:hidden col-start-3 flex justify-end items-center gap-4">
             {/* WhatsApp */}
             <a
-              href="https://wa.me/5592981176994?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20%F0%9F%8D%B8"
+              href="https://wa.me/5592981176994"
               target="_blank"
               rel="noopener noreferrer"
               className="text-green-500 hover:text-green-400 transition"
