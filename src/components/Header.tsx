@@ -1,5 +1,6 @@
-import { Menu, X } from 'lucide-react';
+import { Menu, X, MessageCircle } from 'lucide-react';
 import { useState } from 'react';
+
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -86,59 +87,74 @@ export default function Header() {
             </button>
           </nav>
 
-          {/* MOBILE BUTTON */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-yellow-400 flex justify-end col-start-3"
-          >
-            {isMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
-          </button>
-        </div>
+          {/* MOBILE ACTIONS */}
+          <div className="md:hidden col-start-3 flex justify-end items-center gap-4">
+            {/* WhatsApp */}
+            <a
+              href="https://wa.me/5592981176994?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20%F0%9F%8D%B8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-500 hover:text-green-400 transition"
+              aria-label="WhatsApp"
+            >
+              <MessageCircle className="w-7 h-7" />
+            </a>
 
-        {/* MENU MOBILE */}
-        {isMenuOpen && (
-          <div
-            className="
+            {/* Menu */}
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-yellow-400"
+            >
+              {isMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
+            </button>
+          </div>
+
+
+          {/* MENU MOBILE */}
+          {isMenuOpen && (
+            <div
+              className="
               md:hidden mt-3
               bg-black/95 backdrop-blur-xl
               rounded-2xl p-5
               shadow-xl border border-white/10
               space-y-4
             "
-          >
-            <button
-              onClick={() => scrollToSection('home')}
-              className="block w-full text-left text-gray-300 hover:text-yellow-400"
             >
-              Início
-            </button>
+              <button
+                onClick={() => scrollToSection('home')}
+                className="block w-full text-left text-gray-300 hover:text-yellow-400"
+              >
+                Início
+              </button>
 
-            <button
-              onClick={() => scrollToSection('about')}
-              className="block w-full text-left text-gray-300 hover:text-yellow-400"
-            >
-              Sobre
-            </button>
+              <button
+                onClick={() => scrollToSection('about')}
+                className="block w-full text-left text-gray-300 hover:text-yellow-400"
+              >
+                Sobre
+              </button>
 
-            <button
-              onClick={() => scrollToSection('products')}
-              className="block w-full text-left text-gray-300 hover:text-yellow-400"
-            >
-              Produtos
-            </button>
+              <button
+                onClick={() => scrollToSection('products')}
+                className="block w-full text-left text-gray-300 hover:text-yellow-400"
+              >
+                Produtos
+              </button>
 
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="
+              <button
+                onClick={() => scrollToSection('contact')}
+                className="
                 w-full bg-red-600 text-white py-3
                 rounded-full font-semibold
                 hover:bg-red-700 transition
               "
-            >
-              Contato
-            </button>
-          </div>
-        )}
+              >
+                Contato
+              </button>
+            </div>
+          )}
+        </div>
       </div>
     </header>
   );
