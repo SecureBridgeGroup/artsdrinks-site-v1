@@ -1,4 +1,4 @@
-import { Instagram, Facebook, Mail, Phone, Heart } from 'lucide-react';
+import { Instagram, Mail, Phone, Heart } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -79,13 +79,6 @@ export default function Footer() {
               </a>
 
               <a
-                href="#"
-                className="bg-gray-800 p-3 rounded-full hover:bg-red-600 transition-all hover:scale-110"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-
-              <a
                 href="mailto:contato@artsdrinksmanaus.com.br"
                 className="bg-gray-800 p-3 rounded-full hover:bg-red-600 transition-all hover:scale-110"
               >
@@ -104,22 +97,35 @@ export default function Footer() {
 
         {/* RODAPÉ INFERIOR */}
         <div className="border-t border-gray-800 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
 
-            <div className="flex items-center space-x-2">
-              <p className="text-gray-400 text-sm">
-                © {currentYear} Todos os direitos reservados.
-              </p>
-            </div>
+            {/* Copyright no canto esquerdo */}
+            <p className="text-gray-400 text-sm md:flex-1 text-left">
+              © {currentYear} Todos os direitos reservados.
+            </p>
 
-            <p className="text-gray-400 text-sm flex items-center">
+            {/* Feito com amor centralizado */}
+            <p className="text-gray-400 text-sm flex-1 text-center flex items-center justify-center">
               Feito com <Heart className="w-4 h-4 text-red-500 mx-1 fill-current" /> para eventos incríveis
+            </p>
+
+            {/* Desenvolvido por SB DevSolutions no canto direito */}
+            <p className="text-gray-400 text-sm md:flex-1 text-right">
+              Desenvolvido por{' '}
+              <a
+                href="https://securebridge.com.br/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-white sb-anim hover:underline"
+              >
+                SB DevSolutions
+              </a>
             </p>
 
           </div>
         </div>
 
       </div>
-    </footer>
+    </footer >
   );
 }

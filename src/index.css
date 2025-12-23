@@ -12,6 +12,7 @@
   }
 }
 
+/* Fade In genérico */
 @layer utilities {
   @keyframes fadeIn {
     from {
@@ -27,4 +28,9 @@
   .animate-fadeIn {
     animation: fadeIn 0.3s ease-out;
   }
+}
+
+/* SB DevSolutions animation */
+.sb-anim {
+  @apply animate-sb-animate;
 }
